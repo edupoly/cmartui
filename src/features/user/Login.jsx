@@ -18,6 +18,8 @@ function Login() {
             loginFn(values).then((res)=>{
                 window.localStorage.setItem("token",res.data.token)
                 window.localStorage.setItem("role",res.data.role)
+                window.localStorage.setItem("username",res.data.username)
+                window.localStorage.setItem("id",res.data.id)
                 dispatch(setUser(res.data))
                 navigate("/dashboard")
             })

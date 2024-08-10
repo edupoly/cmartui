@@ -14,6 +14,12 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import Dashboard from './features/dashboard/Dashboard';
 import Welcomepage from './features/common/Welcomepage';
+import AddProduct from './features/dashboard/AddProduct';
+import Products from './features/common/Products';
+import ProductDetails from './features/common/ProductDetails';
+import Cart from './features/common/Cart';
+import PlaceOrder from './features/common/PlaceOrder';
+import Orders from './features/common/Orders';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,11 +31,33 @@ const router = createBrowserRouter([
         children:[
           {
             path:"",
-            element:<Welcomepage></Welcomepage>
+            element:<Products></Products>
+          },
+          {
+            path:"/productDetails/:id",
+            element:<ProductDetails></ProductDetails>
+          },
+          {
+            path:"/cart",
+            element:<Cart></Cart>
+          },
+          {
+            path:"/placeOrder",
+            element:<PlaceOrder></PlaceOrder>
           },
           {
             path:"/dashboard",
-            element:<Dashboard></Dashboard>
+            element:<Dashboard></Dashboard>,
+            children:[
+              {
+                path:"/dashboard/addProduct",
+                element:<AddProduct></AddProduct>
+              },
+              {
+                path:"/dashboard/viewOrders",
+                element:<Orders></Orders>
+              }
+            ]
           },
           {
             path:"/login",

@@ -19,15 +19,15 @@ function Cart() {
     }
   return (
     <div>
-        <h1>Cart</h1>
+        <h1 style={{fontSize:'24px', textAlign:'center', backgroundColor:'whitesmoke',marginTop:'3px'}}>Cart</h1>
         <div className='d-flex flex-wrap'>
           <div className='w-50'>
-            <h3>Cart Items</h3>
-            <table className='table table-striped'>
-            <thead>
-              <th>Product Name</th>
-              <th>Price</th>
-              <th>Action</th>
+            <h3 style={{fontSize:'20px', textAlign:'center'}}>Cart Items</h3>
+            <table className='table table-success table-striped table-bordered border-primary' style={{borderWidth:'2px'}}>
+            <thead className='table table-bordered border-black text-center'>
+              <th className='border-1'>Product Name</th>
+              <th className='border-1'>Price</th>
+              <th className='border-1'>Action</th>
             </thead>
             <tbody>
               {
@@ -47,11 +47,11 @@ function Cart() {
           </table>
           </div>
           <div className='w-50 px-5 text-center'>
-              <h3>Bill</h3>
+              <h3 style={{fontSize:'20px'}}>Bill</h3>
               <table className='table table-striped'>
-                <thead>
-                  <th>Product Name</th>
-                  <th>Total Price</th>
+              <thead className='table table-bordered border-black text-center'>
+                <th className='border-1'>Product Name</th>
+                <th className='border-1'>Price</th>
                 </thead>
                 <tbody>
                   {
@@ -64,8 +64,10 @@ function Cart() {
                   }
                 </tbody>
               </table>
-              <h1>Total Bill: {cartItems.reduce((a,b)=>{return a+(b.price*b.count)},0)}</h1>
-              <button className='btn btn-success' onClick={placeOrder}>Place Order</button>
+              <div style={{borderWidth:'2px', borderRadius:'10px', borderStyle:'solid', boxSizing:'initial', height:'fit-content', margin:'5px', padding:'10px'}}>
+                <h1 style={{fontSize:'20px'}}>Total Bill: {cartItems.reduce((a,b)=>{return a+(b.price*b.count)},0)}</h1>
+                <button className='btn btn-success' onClick={placeOrder}>Place Order</button>
+              </div>
           </div>
         </div>
         

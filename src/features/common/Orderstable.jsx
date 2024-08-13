@@ -68,7 +68,7 @@ function Orderstable({orders}) {
     }
   return (
     <div className='border border-2 border-info m-2 p-2'>
-        <h1>Orderstable</h1>
+        <h1 className='fs-4'>Orderstable</h1>
         <table className='table table-striped'>
             <thead>
                 <tr>

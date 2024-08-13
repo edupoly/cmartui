@@ -25,29 +25,29 @@ function AddProduct() {
         }
     })
   return (
-    <div>
-        <h2>AddProduct Form</h2>
+    <div className='container'>
+        <h2 style={{fontSize:'24px', marginTop:'5px'}}>AddProduct Form</h2>
         <form onSubmit={addProductForm.handleSubmit}>
-            <div class="form-row">
-                <div class="col">
+            <div class="form-row" >
+                <div class="col my-2" >
                 <input type="text" class="form-control" placeholder="Product Name" {...addProductForm.getFieldProps('name')}/>
                 </div>
-                <div class="col">
+                <div class="col my-2" >
                 <input type="text" class="form-control" placeholder="Price"  {...addProductForm.getFieldProps('price')}/>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col">
+            <div class="form-row" >
+                <div class="col my-2">
                 <input type="text" class="form-control" placeholder="Product Image" {...addProductForm.getFieldProps('imgUrl')}/>
                 </div>
-                <div class="col">
+                <div class="col my-2">
                 <input type="text" class="form-control" placeholder="Company"  {...addProductForm.getFieldProps('company')}/>
                 </div>
-                <div class="col">
+                <div class="col my-2">
                 <input type="text" class="form-control" placeholder="Category"  {...addProductForm.getFieldProps('category')}/>
                 </div>
             </div>
-            <button className='btn btn-success'>Save Product</button>
+            <button className='btn btn-success my-4'>Save Product</button>
         </form>
     </div>
   )

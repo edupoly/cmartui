@@ -9,7 +9,7 @@ function AgentDashboard() {
   var {isLoading,data:orders}=useGetOrdersByUserNameQuery(username);
   return (
     <div>
-        <h1>AgentDashboard</h1>
+        <h1 className='fs-3 bg-light text-center p-2'>AgentDashboard</h1>
         <Orderstable orders={orders}></Orderstable>
     </div>
   )

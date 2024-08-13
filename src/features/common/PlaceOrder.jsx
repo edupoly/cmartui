@@ -13,6 +13,7 @@ function PlaceOrder() {
       cartItems
     }
     placeOrderFn(order).then((res)=>{console.log(res)})
+    console.log(order.username)
   }
   return (
     <div>
